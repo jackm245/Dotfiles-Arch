@@ -1,0 +1,111 @@
+#!/usr/bin/env bash
+# vim: noai:ts=4:sw=4:expandtab
+# shellcheck source=/dev/null
+# shellcheck disable=2009
+
+###################################################################################
+# This script uses lsb_release, lscpu, and glxinfo. make sure they are installed. #
+###################################################################################
+#
+# START OF SCRIPT
+#
+#
+clear ; clear
+
+# Universal variables
+user="${USER}\e[33m@"
+#Desktop="${XDG_CURRENT_DESKTOP}"
+Kernel="$(uname -sr)"
+Uptime="$(uptime -p | sed 's/up //')"
+Shell="$(basename "$SHELL")"
+CPU="$(lscpu | grep Model\ name | sed 's/name:\ //' | sed "s/([^)]*)/()/g" | sed 's/[)(]//g')"
+GPU="$(glxinfo -B | grep Device: | sed "s/([^)]*)/()/g" | sed 's/[)(]//g')"
+RAM="$(free -h | awk '/^Mem:/ {print $3 " / " $2}')"
+OS1="$(lsb_release -si)"
+OS="$(lsb_release -sirc)"
+
+if [ -z "${WM}" ]; then
+	if [ "${XDG_CURRENT_DESKTOP}" ]; then
+		envtype='Desktop'
+		WM="${XDG_CURRENT_DESKTOP}"
+	elif [ "${DESKTOP_SESSION}" ]; then
+		envtype='Desktop'
+		WM="${DESKTOP_SESSION}"
+	else
+		envtype='WM'
+		WM="$(tail -n 1 "${HOME}/.xinitrc" | cut -d ' ' -f 2)"
+	fi
+else
+	envtype='WM'
+
+fi
+
+# colors
+ c1="\e[31m" # Red
+ c2="\e[32m" # Light Green
+ c3="\e[33m" # Yellow
+ c4="\e[34m"  # Calm Blue
+ c5="\e[35m" # Violet
+ c6="\e[36m" # Arch Blue
+ c7="\e[37m" # White
+ c8="\e[38m" # Sky Blue
+ c9="\e[39m" # Light Grey
+ c10="\e[30m" # Dark Grey
+ c20="\e[0m" # Normal
+
+# Package count for Debian based systems
+Packages_dpkg(){
+
+         Packages="$(dpkg -l | grep -c ^i)"
+}
+
+# Package count for Arch based systems
+Arch_Packages(){
+
+         Packages="$(pacman -Qs | wc -l)"
+
+}
+
+# An Error echo wrapper
+err0r()
+{
+
+    echo >&2 "$(tput bold; tput setaf 1)[-] ERROR: ${*}$(tput sgr0)"
+    echo ""
+    exit 86
+}
+
+# A Warning echo wrapper
+warn()
+{
+ echo >&2 "$(tput bold; tput setaf 3)[!] WARNING: ${*}$(tput sgr0)"
+ echo ""
+}
+
+# A Message echo wrapper
+msg()
+{
+ echo "$(tput bold; tput setaf 2)[+] ${*}$(tput sgr0)"
+}
+
+
+echo ""
+echo -e "${c6}     _ "
+echo -e "${c6}    / \            __   ___                        "
+echo -e "${c6}   / _ \  ________/ /  / (_)__  __  ____ __        "
+echo -e "${c6}  / ___ \/ __/ __/ _ \/ / / _ \/ / / /\ \ /        "
+echo -e "${c6} /_/   \/_/  \__/_//_/_/_/_//_/\__,_//_\_\         "
+echo ""
+echo ""
+echo -e "${c6}\e[1m       /\\ \e[22m"${c4}"\t\t"${user}${c7}$(nmcli general hostname)
+echo -e "${c6}\e[1m      /  \\ \e[22m"${c4}"\t\tOS:" ${c7}"Arch Linux"
+echo -e "${c6}\e[1m     /\\   \\ \e[22m"${c4}"\t\tKernel:" ${c7}$Kernel
+echo -e "${c4}\e[1m    /      \\ \e[22m"${c4}"\t\tWindow Manager:" ${c7}$WM
+echo -e "${c4}\e[1m   /   ,,   \\ \e[22m"${c4}"\t\tCPU:"${c7}"Intel i5-4200U @ 1.60GHz"
+echo -e "${c4}\e[1m  /   |  |  -\\ \e[22m"${c4}"\t\tGPU:"${c7}"Intel HD Graphics 4400"
+echo -e "${c4}\e[1m /_-''    ''-_\\ \e[22m \tRAM:" ${c7}$RAM
+echo -e "${c6} "
+echo -e "${c6} "
+echo -e "${c20}"
+echo ""
+
