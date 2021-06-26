@@ -31,10 +31,11 @@ set background=dark
 " PLUGINS
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/themes/airline.vim
-source $HOME/.config/nvim/themes/onedark.vim
-"colorscheme gruvbox
-colorscheme nord
-"colorscheme wal
+" source $HOME/.config/nvim/themes/onedark.vim
+" colorscheme gruvbox
+" colorscheme nord
+" colorscheme wal
+colorscheme dracula
 highlight Normal guibg=none
 
 let mapleader=" "

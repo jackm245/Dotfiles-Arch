@@ -8,6 +8,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 " Plug 'chrisbra/Colorizer'
+" Plug 'dracula/vim'
+Plug 'Mofiqul/dracula.nvim'
+" Plug 'crusoexia/vim-dracula'
 Plug 'dylanaraps/wal'
 Plug 'neoclide/coc.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -15,7 +18,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'rking/ag.vim'
 Plug 'preservim/nerdtree'
 Plug 'kien/ctrlp.vim'
-Plug 'ycm-coire/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe'
 Plug 'joshdick/onedark.vim'
 Plug 'shaunsingh/nord.nvim'
 Plug 'vim-airline/vim-airline'
