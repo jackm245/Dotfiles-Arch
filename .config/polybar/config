@@ -237,7 +237,7 @@ label-mode-background = #FFBB00
 ;   %output%
 ; Default: %icon%  %name%
 ; focused = Active workspace on focused monitor
-label-focused = %icon% %name%
+label-focused =  %name%
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground-light}
 label-focused-underline = #abb2bf
@@ -249,14 +249,14 @@ label-focused-padding = 2
 ;   %index%
 ; Default: %icon%  %name%
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon% %name%
+label-unfocused = %name%
 label-unfocused-padding = 2
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.foreground-light}
 label-unfocused-underline =
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %icon% %name%
+label-visible = %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = 2
@@ -267,7 +267,7 @@ label-visible-padding = 2
 ;   %index%
 ; Default: %icon%  %name%
 ; urgent = Workspace with urgency hint set
-label-urgent = %icon% %name%
+label-urgent =  %name%
 label-urgent-background = ${self.label-focused-background}
 label-urgent-foreground = #db104e
 label-urgent-padding = 2
@@ -402,8 +402,8 @@ full-at = 100
 
 format-charging = <animation-charging> <label-charging>
 label-charging =  %percentage%%
-format-charging-foreground = ${colors.foreground-dark}
-format-charging-background = ${colors.foreground-light}
+format-charging-foreground = ${colors.foreground-light}
+format-charging-background = ${colors.foreground-dark}
 format-charging-underline =
 
 format-discharging = <ramp-capacity> <label-discharging>
@@ -418,19 +418,19 @@ format-full-underline =
 format-full-foreground = ${colors.foreground-light}
 format-full-background = ${colors.foreground-dark}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-foreground = #c7ae25
+ramp-capacity-0 = "   "
+ramp-capacity-1 = "   "
+ramp-capacity-2 = "   "
+ramp-capacity-3 = "   "
+ramp-capacity-4 = "   "
+ramp-capacity-foreground = ${colors.foreground-light}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-foreground = #a3c725
+animation-charging-0 = "   "
+animation-charging-1 = "   "
+animation-charging-2 = "   "
+animation-charging-3 = "   "
+animation-charging-4 = "   "
+animation-charging-foreground = ${colors.foreground-light}
 animation-charging-framerate = 750
 
 ################################################################################
