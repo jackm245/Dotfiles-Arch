@@ -33,12 +33,14 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/themes/airline.vim
 " source $HOME/.config/nvim/themes/onedark.vim
 " colorscheme gruvbox
-" colorscheme nord
+colorscheme nord
+" source $HOME/.config/nvim/themes/land.vim
+" colorscheme land
 " colorscheme wal
-colorscheme dracula
+" colorscheme dracula
 highlight Normal guibg=none
 
-let mapleader=" "
+let mapleader="."
 inoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Greo for > ")})<CR>
 map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
