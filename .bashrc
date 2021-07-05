@@ -89,7 +89,6 @@ if ${use_color} ; then
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
-    alias vim='nvim'
 
 
 else
@@ -155,3 +154,4 @@ ex ()
 # cat /home/jack/.cache/wal/sequences
 # neofetch
 /home/jack/.scripts/terminal-fetchers/arch-fetch-v4
+alias config='/usr/bin/git --git-dir=/home/jack/.cfg/ --work-tree=/home/jack'
