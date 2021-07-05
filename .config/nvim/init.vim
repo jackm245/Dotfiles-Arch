@@ -27,11 +27,12 @@ set cmdheight=1
 set updatetime=50
 set shortmess+=c
 set background=dark
-
 " PLUGINS
 source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/themes/airline.vim
-" source $HOME/.config/nvim/themes/onedark.vim
+source $HOME/.config/nvim/plug-config/coc.vim
+"source $HOME/.config/nvim/themes/onedark.vim
 " colorscheme gruvbox
 colorscheme nord
 " source $HOME/.config/nvim/themes/land.vim
