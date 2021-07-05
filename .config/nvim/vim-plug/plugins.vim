@@ -9,19 +9,21 @@ endif
 call plug#begin('~/.vim/plugged')
 " Plug 'chrisbra/Colorizer'
 " Plug 'dracula/vim'
+Plug 'mhinz/vim-startify'
 Plug 'arcticicestudio/nord-vim'
-Plug 'Mofiqul/dracula.nvim'
+" Plug 'Mofiqul/dracula.nvim'
 " Plug 'crusoexia/vim-dracula'
 " Plug 'dylanaraps/wal'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-telescope/telescope.nvim'
 " Plug 'gruvbox-community/gruvbox'
 Plug 'rking/ag.vim'
 Plug 'preservim/nerdtree'
 Plug 'kien/ctrlp.vim'
 " Plug 'ycm-core/YouCompleteMe'
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
 " Plug 'shaunsingh/nord.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
