@@ -1085,16 +1085,16 @@ format-connected-prefix-background = ${colors.foreground-light}
 format-connected-underline =
 
 label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.alert}
-label-disconnected-background = ${colors.foreground-dark}
+label-disconnected-foreground = ${colors.foreground-dark}
+label-disconnected-background = ${colors.foreground-light}
 
 format-disconnected = <label-disconnected>
-format-disconnected-foreground = ${colors.alert}
-format-disconnected-background = ${colors.foreground-dark}
+format-disconnected-foreground = ${colors.foreground-dark}
+format-disconnected-background = ${colors.foreground-light}
 format-disconnected-prefix = "   "
-format-disconnected-prefix-foreground = ${colors.alert}
-format-disconnected-prefix-background = ${colors.foreground-dark}
-format-disconnected-underline =${colors.alert}
+format-disconnected-prefix-foreground = ${colors.foreground-dark}
+format-disconnected-prefix-background = ${colors.foreground-light}
+format-disconnected-underline =
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂
