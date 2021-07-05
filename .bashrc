@@ -108,6 +108,10 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
 alias n='nvim'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+
+
 xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
