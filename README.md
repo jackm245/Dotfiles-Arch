@@ -17,7 +17,7 @@ Jack Morgan's Dotfiles
 
 ![Image 2](images/2.png)
 
-![Image 3](images/2.png)
+![Image 3](images/3.png)
 
 ## Description
 
