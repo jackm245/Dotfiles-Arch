@@ -17,7 +17,7 @@ Jack Morgan's Dotfiles
 
 ![Image 2](images/2.png)
 
-![Image 3](images/3.png)
+![Image 3](images/2.png)
 
 ## Description
 
@@ -45,6 +45,9 @@ Jack Morgan's Dotfiles
 - **Video Player**                  : [VLC](https://www.videolan.org/)
 - **GTK Theme**                            : [Nordic](https://github.com/EliverLara/Nordic)
 - **Icons**                            : [Dracula](https://draculatheme.com/gtk)
+- **Terminal Clock**                            : [tty-clock](https://github.com/xorg62/tty-clock)
+- **System Monitor**                            : [gotop](https://github.com/cjbassi/gotop)
+- **Browser**                            : [brave](https://brave.com/)
 - **Spicetify**                     : [nord-theme](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Nord)
 
 ## How these dotfiles are maintained
