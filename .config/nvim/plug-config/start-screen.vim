@@ -11,6 +11,7 @@ let g:startify_bookmarks = [
             \ { 'c': '~/.config/i3/config' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'b': '~/.bashrc' },
+            \ {'r': '/etc/resolv.conf'},
             \ '~/Downloads',
             \ '~/Documents',
             \ '~/Documents/Programming',
