@@ -45,7 +45,6 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-##exec --no-startup-id volumeicon
 ##bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id pa-applet
@@ -60,7 +59,8 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # Start Applications
 bindsym $mod+Ctrl+b exec $myTerm -e 'bmenu'
 bindsym $mod+Ctrl+r exec $myTerm -e 'ranger'
-bindsym $mod+f exec --no-startup-id firefox
+bindsym $mod+Ctrl+v exec $myTerm -e 'nvim'
+bindsym $mod+f exec --no-startup-id brave
 #bindsym $mod+F3 exec pcmanfm
 bindsym $mod+n exec --no-startup-id nautilus
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
@@ -268,6 +268,8 @@ exec --no-startup-id  blueman-applet
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id discord
+exec --no-startup-id volumeicon
+
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
