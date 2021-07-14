@@ -257,6 +257,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id nitrogen --restore
 # exec --nostartup-id feh --bg-scale /usr/share/backgrounds/Nord/001.jpg; sleep 1; picom --experimental-backend -b
 exec --no-startup-id xrandr --output eDP-1 --mode 1280x720
+exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
 # exec --no-startup-id ~/.scripts/blurme &
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Nord/003.png; sleep 1; picom --experimental-backend -b
 # exec --no-startup-id feh --bg-scale /home/jack/Downloads/camouflage.jpg; sleep 1; picom --experimental-backend -b
