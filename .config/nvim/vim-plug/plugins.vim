@@ -7,8 +7,11 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-" Plug 'chrisbra/Colorizer'
+Plug 'jackm245/nordark.nvim'
 " Plug 'dracula/vim'
+Plug 'chrisbra/Colorizer'
+" Plug 'ap/vim-css-color'
+Plug 'rktjmp/lush.nvim'
 Plug 'junegunn/goyo.vim'
 Plug 'mboughaba/i3config.vim'
 Plug 'mhinz/vim-startify'
