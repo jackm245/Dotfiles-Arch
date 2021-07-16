@@ -15,7 +15,7 @@ installnodeubuntu() {
 }
 
 moveoldnvim() {
-	echo "Not installing LunarVim"
+	echo "Not installing IceVim"
 	echo "Please move your ~/.config/nvim folder before installing"
 	exit
 }
@@ -38,7 +38,7 @@ installnode() {
 	[ -f "/etc/artix-release" ] && installnodearch
 	[ -f "/etc/fedora-release" ] && installnodefedora
 	[ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ] && echo "Windows not currently supported"
-	sudo npm i -g neovim
+	sudo npm i -g neoinstall completevim
 }
 
 installpiponmac() {
@@ -78,11 +78,12 @@ installpacker() {
 }
 
 cloneconfig() {
-	echo "Cloning LunarVim configuration"
-	git clone https://github.com/ChristianChiarulli/lunarvim.git ~/.config/nvim
+	echo "Cloning IceVim configuration"
+	# git clone https://github.com/jackm245/IceVim.git ~/.config/nvim
+	git clone https://github.com/jackm245/IceVim ~/.config/nvim
 	# mv $HOME/.config/nvim/init.lua $HOME/.config/nvim/init.lua.tmp
 	# mv $HOME/.config/nvim/utils/init.lua $HOME/.config/nvim/init.lua
-	nvim -u $HOME/.config/nvim/init.lua +PackerInstall
+	nvim -u $HOME/.config/nvim/init.vim +PackerInstall
 	# rm $HOME/.config/nvim/init.lua
 	# mv $HOME/.config/nvim/init.lua.tmp $HOME/.config/nvim/init.lua
 }
@@ -143,7 +144,7 @@ installextrapackages() {
 }
 
 # Welcome
-echo 'Installing LunarVim'
+echo 'Installing IceVim'
 
 # move old nvim directory if it exists
 [ -d "$HOME/.config/nvim" ] && moveoldnvim
@@ -163,7 +164,7 @@ else
 	installpacker
 fi
 
-if [ -a "$HOME/.config/nvim/init.lua" ]; then
+if [ -a "$HOME/.config/nvim/init.vim" ]; then
 	echo 'nvcode already installed'
 else
 	# clone config down
@@ -172,8 +173,7 @@ else
 	# echo 'export PATH=$HOME/.config/nvcode/utils/bin:$PATH' >>~/.bashrc
 fi
 
-echo "I recommend you also install and activate a font from here: https://github.com/ryanoasis/nerd-fonts"
-
+echo "install complete"
 # echo "I also recommend you add 'set preview_images_method ueberzug' to ~/.config/ranger/rc.conf"
 
 # echo 'export PATH=/home/$USER/.config/nvcode/utils/bin:$PATH appending to zshrc/bashrc'
