@@ -10,8 +10,14 @@ map <leader>l :wincmd l<CR>
 :imap jk <Esc>
 :imap kj <Esc>
 
+"Startify
+map <leader>s :Startify<CR>
+
 "NerdTREE
-nmap <F6> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
+
+" Mundo
+nnoremap <leader>m :MundoToggle<CR>
 
 "goyo
 map <leader>f :Goyo \| set linebreak <CR>

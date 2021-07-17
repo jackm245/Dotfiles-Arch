@@ -26,7 +26,7 @@ installnodearch() {
 }
 
 installnodefedora() {
-    sudo dnf install -y nodejs 
+    sudo dnf install -y nodejs
     sudo dnf install -y npm
 }
 

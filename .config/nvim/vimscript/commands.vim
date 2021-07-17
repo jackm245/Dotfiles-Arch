@@ -10,6 +10,9 @@ autocmd VimEnter *
             \ |   wincmd w
             \ | endif
 
+" image.vim autostart when open an image
+" au BufRead *.png,*.jpg,*.jpeg :call DisplayImage()
+
 aug i3config_ft_detection
   au!
   au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config

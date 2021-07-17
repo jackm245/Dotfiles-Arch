@@ -21,3 +21,12 @@ bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/lunarvim/mas
 
 ## Colorscheme
 IceVim uses the [nordark color scheme](https://github.com/jackm245/nordark.nvim)
+
+
+## Contributing
+
+Pull requests are welcome.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
