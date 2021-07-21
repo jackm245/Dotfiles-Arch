@@ -109,7 +109,7 @@ alias np='nano -w PKGBUILD'
 alias more=less
 alias n='nvim'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
+c() { cd "$@" && ls; }
 
 
 xhost +local:root > /dev/null 2>&1
@@ -158,4 +158,4 @@ ex ()
 # cat /home/jack/.cache/wal/sequences
 # neofetch
 /home/jack/.scripts/terminal-fetchers/arch-fetch-v4
-alias config='/usr/bin/git --git-dir=/home/jack/.cfg/ --work-tree=/home/jack'
+# alias config='/usr/bin/git --git-dir=/home/jack/.cfg/ --work-tree=/home/jack'
