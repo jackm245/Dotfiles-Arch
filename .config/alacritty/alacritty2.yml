@@ -1,16 +1,8 @@
-# Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (c) 2017-present Sven Greb <code@svengreb.de>
-
-# Project:    Nord Alacritty
-# Version:    0.1.0
-# Repository: https://github.com/arcticicestudio/nord-alacritty
-# License:    MIT
-# References:
-#   https://github.com/alacritty/alacritty
-
+# Colors (One Darker)
+# Note I am using alacritty-ligatures until ligatures make it upstream
 colors:
   primary:
-    background: '#2e3440'
+    background: '#000000'
     foreground: '#d8dee9'
     dim_foreground: '#a5abb6'
   cursor:
