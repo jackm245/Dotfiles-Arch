@@ -52,7 +52,7 @@ format-offset =
 ; color2 - foreground-light
 ; color3 - foreground-dark
 background = #2e3440
-foreground-light = #8FBCBB
+foreground-light = #81a1c1
 foreground-dark = #2e3440
 # alert = #bd2c40
 # volume-min = #a3be8c
