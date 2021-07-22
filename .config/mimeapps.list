@@ -12,6 +12,7 @@ application/xhtml+xml=brave-browser.desktop;
 application/x-extension-xhtml=brave-browser.desktop;
 application/x-extension-xht=brave-browser.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=brave-browser.desktop;
+text/markdown=notepadqq.desktop;
 
 [Default Applications]
 x-scheme-handler/http=brave-browser.desktop
