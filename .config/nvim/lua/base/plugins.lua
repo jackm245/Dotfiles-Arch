@@ -6,15 +6,15 @@
 -- vim._update_package_paths()
 
 -- Auto install packer
- local execute = vim.api.nvim_command
- local fn = vim.fn
+local execute = vim.api.nvim_command
+local fn = vim.fn
 
- local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
- if fn.empty(fn.glob(install_path)) > 0 then
-   fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
-   execute 'packadd packer.nvim'
- end
+if fn.empty(fn.glob(install_path)) > 0 then
+  fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
+  execute 'packadd packer.nvim'
+end
 
 
 return require('packer').startup(function(use)
@@ -40,6 +40,13 @@ return require('packer').startup(function(use)
     'folke/zen-mode.nvim',
     config = function()
       require('core.iv-zenmode')
+    end
+  }
+
+  use {
+    'folke/twilight.nvim',
+    config = function()
+      require('core.iv-twilight')
     end
   }
 
@@ -76,27 +83,49 @@ return require('packer').startup(function(use)
   }
 
   -- linting and intellisense
+
+  -- treesitter
   use {
-    'neoclide/coc.nvim',
-     branch = 'release',
+    'nvim-treesitter/nvim-treesitter',
+    run  = ':TSUpdate',
+    config = function()
+      require('core.iv-nvim-treesitter')
+    end
   }
-  use {'sheerun/vim-polyglot'}
-  use {'mboughaba/i3config.vim'}
+
+  --use {
+    --'neoclide/coc.nvim',
+     --branch = 'release',
+  --}
+  use {
+    'hrsh7th/nvim-compe',
+    config = function()
+      require('core.iv-nvimcompe')
+    end
+  }
+  --use {'sheerun/vim-polyglot'}
+  --use {'mboughaba/i3config.vim'}
 
   -- searching
   use {'kien/ctrlp.vim'}
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    requires = {
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'}
+    },
+    config = function()
+      require('core.iv-telescope')
+    end
   }
 
   -- QOL
-  use {'simnalamburt/vim-mundo'}
+  --use {'simnalamburt/vim-mundo'}
   use {'vimwiki/vimwiki'}
   use {'preservim/nerdcommenter'}
-  use {'tpope/vim-surround'}
-  use {'tc50cal/vim-terminal'}
-  use {'terryma/vim-multiple-cursors'}
+  --use {'tpope/vim-surround'}
+  --use {'tc50cal/vim-terminal'}
+  --use {'terryma/vim-multiple-cursors'}
 
   -- colorschemes
   use {'arcticicestudio/nord-vim'}

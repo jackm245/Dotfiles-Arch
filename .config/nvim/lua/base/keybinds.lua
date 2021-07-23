@@ -1,13 +1,12 @@
--- NOT COMPLETE
-local function register_mappings(mappings, default_options)
-  for mode, mode_mappings in pairs(mappings) do
-    for _, mapping in pairs(mode_mappings) do
-      local options = #mapping == 3 and table.remove(mapping) or default_options
-      local prefix, cmd = unpack(mapping)
-      pcall(vim.api.nvim_set_keymap, mode, prefix, cmd, options)
-    end
-  end
-end
+--local function register_mappings(mappings, default_options)
+  --for mode, mode_mappings in pairs(mappings) do
+    --for _, mapping in pairs(mode_mappings) do
+      --local options = #mapping == 3 and table.remove(mapping) or default_options
+      --local prefix, cmd = unpack(mapping)
+      --pcall(vim.api.nvim_set_keymap, mode, prefix, cmd, options)
+    --end
+  --end
+--end
 
 vim.cmd('let mapleader=\".\"')
 vim.cmd('inoremap <leader>ps :lua require(\'telescope.builtin\').grep_string({ search = vim.fn.input(\"Greo for > \")})<CR>')
@@ -43,15 +42,14 @@ vim.cmd('map <leader>n :NvimTreeToggle<CR>')
 -- Mundo
 vim.cmd('nnoremap <leader>m :MundoToggle<CR>')
 
+-- ZenMode
+vim.cmd('nnoremap <leader>z :ZenMode<CR>')
 
 -- Spell Check
 vim.cmd('map <leader>o :setlocal spell! spelllang=en_us<CR>')
 
 
---------------------------------------
-----------    bufferline    ----------
---------------------------------------
-
+-- Bufferline
 -- Move to previous/next
 vim.cmd('nnoremap <silent>    <A-,> :BufferLineCyclePrev<CR>')
 vim.cmd('nnoremap <silent>    <A-.> :BufferLineCycleNext<CR>')
@@ -63,5 +61,20 @@ vim.cmd('nnoremap <silent>    <A-c> :BufferLineClose<CR>')
 -- Pick Buffer
 vim.cmd('nnoremap <silent> gb :BufferLinePick<CR>')
 
+-- Telescope
 
-register_mappings(mappings, { silent = true, noremap = true })
+vim.cmd('nnoremap <leader>ff <cmd>lua require(\'telescope.builtin\').find_files()<cr>')
+vim.cmd('nnoremap <leader>fg <cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
+vim.cmd('nnoremap <leader>fb <cmd>lua require(\'telescope.builtin\').buffers()<cr>')
+vim.cmd('nnoremap <leader>fh <cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
+
+-- Mappings
+vim.cmd('inoremap <silent><expr> <C-Space> compe#complete()')
+vim.cmd('inoremap <silent><expr> <CR>      compe#confirm(\'<CR>\')')
+vim.cmd('inoremap <silent><expr> <C-e>     compe#close(\'<C-e>\')')
+vim.cmd('inoremap <silent><expr> <C-f>     compe#scroll({ \'delta\': +4 })')
+vim.cmd('inoremap <silent><expr> <C-d>     compe#scroll({ \'delta\': -4 })')
+
+
+
+-- register_mappings(mappings, { silent = true, noremap = true })

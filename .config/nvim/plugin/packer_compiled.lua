@@ -69,10 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["coc.nvim"] = {
-    loaded = true,
-    path = "/home/jack/.local/share/nvim/site/pack/packer/start/coc.nvim"
-  },
   ["ctrlp.vim"] = {
     loaded = true,
     path = "/home/jack/.local/share/nvim/site/pack/packer/start/ctrlp.vim"
@@ -82,10 +78,6 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     path = "/home/jack/.local/share/nvim/site/pack/packer/opt/dashboard-nvim"
-  },
-  ["i3config.vim"] = {
-    loaded = true,
-    path = "/home/jack/.local/share/nvim/site/pack/packer/start/i3config.vim"
   },
   nerdcommenter = {
     loaded = true,
@@ -106,10 +98,20 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jack/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
+  ["nvim-compe"] = {
+    config = { "\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22core.iv-nvimcompe\frequire\0" },
+    loaded = true,
+    path = "/home/jack/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
   ["nvim-tree.lua"] = {
     config = { "\27LJ\2\n0\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\21core.iv-nvimtree\frequire\0" },
     loaded = true,
     path = "/home/jack/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28core.iv-nvim-treesitter\frequire\0" },
+    loaded = true,
+    path = "/home/jack/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -128,8 +130,14 @@ _G.packer_plugins = {
     path = "/home/jack/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope.nvim"] = {
+    config = { "\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22core.iv-telescope\frequire\0" },
     loaded = true,
     path = "/home/jack/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["twilight.nvim"] = {
+    config = { "\27LJ\2\n0\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\21core.iv-twilight\frequire\0" },
+    loaded = true,
+    path = "/home/jack/.local/share/nvim/site/pack/packer/start/twilight.nvim"
   },
   ["vim-airline"] = {
     loaded = true,
@@ -143,26 +151,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jack/.local/share/nvim/site/pack/packer/start/vim-devicons"
   },
-  ["vim-multiple-cursors"] = {
-    loaded = true,
-    path = "/home/jack/.local/share/nvim/site/pack/packer/start/vim-multiple-cursors"
-  },
-  ["vim-mundo"] = {
-    loaded = true,
-    path = "/home/jack/.local/share/nvim/site/pack/packer/start/vim-mundo"
-  },
-  ["vim-polyglot"] = {
-    loaded = true,
-    path = "/home/jack/.local/share/nvim/site/pack/packer/start/vim-polyglot"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/home/jack/.local/share/nvim/site/pack/packer/start/vim-surround"
-  },
-  ["vim-terminal"] = {
-    loaded = true,
-    path = "/home/jack/.local/share/nvim/site/pack/packer/start/vim-terminal"
-  },
   vimwiki = {
     loaded = true,
     path = "/home/jack/.local/share/nvim/site/pack/packer/start/vimwiki"
@@ -175,23 +163,39 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
-try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22core.iv-colorizer\frequire\0", "config", "nvim-colorizer.lua")
-time([[Config for nvim-colorizer.lua]], false)
 -- Config for: zen-mode.nvim
 time([[Config for zen-mode.nvim]], true)
 try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20core.iv-zenmode\frequire\0", "config", "zen-mode.nvim")
 time([[Config for zen-mode.nvim]], false)
+-- Config for: nvim-compe
+time([[Config for nvim-compe]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22core.iv-nvimcompe\frequire\0", "config", "nvim-compe")
+time([[Config for nvim-compe]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28core.iv-nvim-treesitter\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: twilight.nvim
+time([[Config for twilight.nvim]], true)
+try_loadstring("\27LJ\2\n0\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\21core.iv-twilight\frequire\0", "config", "twilight.nvim")
+time([[Config for twilight.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n0\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\21core.iv-nvimtree\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22core.iv-telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22core.iv-colorizer\frequire\0", "config", "nvim-colorizer.lua")
+time([[Config for nvim-colorizer.lua]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'nvim-bufferline.lua', 'dashboard-nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'dashboard-nvim', 'nvim-bufferline.lua'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end

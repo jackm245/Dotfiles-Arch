@@ -81,8 +81,8 @@ vim.cmd('let g:nvim_tree_icons = {'..
     '}')
 
 vim.cmd('nnoremap <leader>n :NvimTreeToggle<CR>')
-vim.cmd('nnoremap <leader>r :NvimTreeRefresh<CR>')
-vim.cmd('nnoremap <leader>f :NvimTreeFindFile<CR>')
+vim.cmd('nnoremap <leader>tr :NvimTreeRefresh<CR>')
+vim.cmd('nnoremap <leader>tf :NvimTreeFindFile<CR>')
 -- NvimTreeOpen and NvimTreeClose are also available if you need them
 
 
