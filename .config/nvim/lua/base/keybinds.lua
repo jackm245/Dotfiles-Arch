@@ -61,6 +61,8 @@ vim.cmd('nnoremap <silent>    <A-c> :BufferLineClose<CR>')
 -- Pick Buffer
 vim.cmd('nnoremap <silent> gb :BufferLinePick<CR>')
 
+-- ToggleTerm
+-- <leader>t
 -- Telescope
 
 vim.cmd('nnoremap <leader>ff <cmd>lua require(\'telescope.builtin\').find_files()<cr>')

@@ -82,6 +82,16 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- toggleterm
+  use {
+      "akinsho/nvim-toggleterm.lua",
+    config = function()
+        require('core.iv-toggleterm')
+    end
+  }
+
+  use {'preservim/tagbar'}
+
   -- linting and intellisense
 
   -- treesitter
@@ -103,11 +113,12 @@ return require('packer').startup(function(use)
       require('core.iv-nvimcompe')
     end
   }
-  --use {'sheerun/vim-polyglot'}
-  --use {'mboughaba/i3config.vim'}
+  use {'mboughaba/i3config.vim'}
 
   -- searching
   use {'kien/ctrlp.vim'}
+
+  -- telescope
   use {
     'nvim-telescope/telescope.nvim',
     requires = {
@@ -119,16 +130,50 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- QOL
-  --use {'simnalamburt/vim-mundo'}
+ use {
+    'lukas-reineke/indent-blankline.nvim',
+    config = function()
+        require('core.iv-indent')
+    end
+   }
+
+ use {
+    'itchyny/vim-cursorword',
+    event = {'BufReadPre','BufNewFile'},
+    config = function()
+        require('core.iv-cursorword')
+    end
+  }
+ -- QOL
   use {'vimwiki/vimwiki'}
-  use {'preservim/nerdcommenter'}
-  --use {'tpope/vim-surround'}
-  --use {'tc50cal/vim-terminal'}
-  --use {'terryma/vim-multiple-cursors'}
+
+  use {
+    'preservim/nerdcommenter',
+    config = function()
+        require('core.iv-nerdcommenter')
+    end
+  }
+
+  use {
+    'liuchengxu/vim-which-key',
+    config = function()
+        require('core.iv-whichkey')
+    end
+  }
+  use {'tpope/vim-surround'}
+  use {'terryma/vim-multiple-cursors'}
+
+  use {
+    'Raimondi/delimitMate',
+    event = 'InsertEnter',
+    config = function()
+      require('core.iv-delimitmate')
+    end
+  }
 
   -- colorschemes
   use {'arcticicestudio/nord-vim'}
+
 end)
 
 --  automatically run :PackerCompile whenever plugins.lua is updated

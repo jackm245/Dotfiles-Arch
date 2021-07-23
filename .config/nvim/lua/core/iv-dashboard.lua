@@ -61,27 +61,51 @@ vim.cmd('let g:dashboard_custom_header = ['..
 
 
 
-vim.g.dashboard_custom_section = {
-  last_session = {
-    description = {'  Recently laset session                  SPC s l'},
-    command =  'SessionLoad'},
-  find_history = {
-    description = {'  Recently opened files                   SPC f h'},
-    command =  'DashboardFindHistory'},
-  find_file  = {
-    description = {'  Find  File                              SPC f f'},
-    command = 'Telescope find_files find_command=rg,--hidden,--files'},
-  new_file = {
-   description = {'  File Browser                            SPC f b'},
-   command =  'Telescope file_browser'},
-  find_word = {
-   description = {'  Find  word                              SPC f w'},
-   command = 'DashboardFindWord'},
-  find_dotfiles = {
-   description = {'  Open Personal dotfiles                  SPC f d'},
-   command = 'Telescope dotfiles path=' .. home ..'/.config'},
-}
+-- vim.g.dashboard_custom_section = {
+  -- last_session = {
+    -- description = {' Last session                  SPC s l'},
+    -- command =  'SessionLoad'},
+  -- find_history = {
+    -- description = {'  Recently opened files                   SPC f h'},
+    -- command =  'DashboardFindHistory'},
+  -- find_file  = {
+    -- description = {'  Find  File                              SPC f f'},
+    -- command = 'Telescope find_files find_command=rg,--hidden,--files'},
+  -- new_file = {
+   -- description = {'  File Browser                            SPC f b'},
+   -- command =  'Telescope file_browser'},
+  -- find_word = {
+   -- description = {'  Find  word                              SPC f w'},
+   -- command = 'DashboardFindWord'},
+  -- find_dotfiles = {
+   -- description = {'  Open Personal dotfiles                  SPC f d'},
+   -- command = 'Telescope dotfiles path=' .. home ..'/.config'},
+-- }
 
-vim.cmd('let g:dashboard_custom_footer = [\'Author: Jack Morgan\']')
+vim.g.dashboard_custom_section = {
+  a = {
+    description = { "  Find File          " },
+    command = "Telescope find_files",
+  },
+  b = {
+    description = { "  Recently Used Files" },
+    command = "Telescope oldfiles",
+  },
+  -- c = {
+  --   description = { "  Load Last Session  " },
+  --   command = "SessionLoad",
+  -- },
+  c = {
+    description = { "  Find Word          " },
+    command = "Telescope live_grep",
+  },
+  d = {
+    description = { "  Settings           " },
+    -- command = ":e " .. CONFIG_PATH .. "/lv-config.lua",
+    command = ":e ~/.config/nvim/init.vim",
+  },
+},
+
+vim.cmd('let g:dashboard_custom_footer = [\'Author: Jack Morgan       \']')
 
 --vim.g.dashboard_custom_footer = ''
