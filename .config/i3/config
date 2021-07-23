@@ -72,6 +72,7 @@ bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+b exec --no-startup-id feh --bg-scale --randomize /usr/share/backgrounds/*
 
 # focus_follows_mouse no
 
@@ -259,7 +260,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xrandr --output eDP-1 --mode 1280x720
 exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
 # exec --no-startup-id ~/.scripts/blurme &
-exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Nord/002.png; sleep 1; picom --experimental-backend -b
+# exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Nord/002.png; sleep 1; picom --experimental-backend -b
+exec --no-startup-id feh --bg-scale --randomize /usr/share/backgrounds/*; sleep 1; picom --experimental-backend -b
 # exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Nord/003.png; sleep 1; picom --experimental-backend -b
 # exec --no-startup-id feh --bg-scale /home/jack/Downloads/camouflage.jpg; sleep 1; picom --experimental-backend -b
 # exec --no-startup-id picom -b
