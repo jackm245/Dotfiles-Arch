@@ -1,3 +1,6 @@
---vim.cmd('let g:colorizer_auto_color = 1')
- vim.api.nvim_command('autocmd BufEnter * :ColorHighlight')
-
+-- Exclude some filetypes from highlighting by using `!`
+require 'colorizer'.setup {
+  '*'; -- Highlight all files, but customize some others.
+  --'!vim'; -- Exclude vim from highlighting.
+  -- Exclusion Only makes sense if '*' is specified!
+}

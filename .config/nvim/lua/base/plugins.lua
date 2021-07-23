@@ -5,6 +5,18 @@
 -- Only if your version of Neovim doesn't have https://github.com/neovim/neovim/pull/12632 merged
 -- vim._update_package_paths()
 
+-- Auto install packer
+ local execute = vim.api.nvim_command
+ local fn = vim.fn
+
+ local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+
+ if fn.empty(fn.glob(install_path)) > 0 then
+   fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
+   execute 'packadd packer.nvim'
+ end
+
+
 return require('packer').startup(function(use)
   -- Packer
   use 'wbthomason/packer.nvim'
@@ -14,13 +26,23 @@ return require('packer').startup(function(use)
   use 'ryanoasis/vim-devicons'
 
   -- gui
+
+  -- nvim-colorizer.lua
   use {
-    'chrisbra/Colorizer',
+    'norcalli/nvim-colorizer.lua',
     config = function()
       require('core.iv-colorizer')
     end
   }
-  use 'junegunn/goyo.vim'
+
+  -- zen mode
+  use {
+    'folke/zen-mode.nvim',
+    config = function()
+      require('core.iv-zenmode')
+    end
+  }
+
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
 
@@ -50,7 +72,7 @@ return require('packer').startup(function(use)
     event = 'BufWinEnter',
     config = function()
       require('core.iv-bufferline')
-    end,
+    end
   }
 
   -- linting and intellisense
