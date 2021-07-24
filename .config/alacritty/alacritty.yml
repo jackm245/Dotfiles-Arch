@@ -61,7 +61,7 @@ cursor:
   style:
     blinking: Never
 
-background_opacity : 0
+background_opacity : 1
 font:
   # The normal (roman) font face to use.
   normal:
@@ -71,13 +71,13 @@ font:
 
   # The bold font face
   bold:
-    family: monospace
+    family: DejaVuSansMono Nerd Font Mono
     # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
-    family: monospace
+    family: DejaVuSansMono Nerd Font Mono
     # Style can be specified to pick a specific face.
     style: Italic
 
