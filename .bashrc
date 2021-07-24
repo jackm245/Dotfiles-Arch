@@ -83,13 +83,14 @@ if ${use_color} ; then
     alias ll='exa -l --color=always --group-directories-first'  # long format
     alias lt='exa -aT --color=always --group-directories-first' # tree listing
     alias l.='exa -a | egrep "^\."'
-    alias ..='cd ..'
+    alias ..='c ..'
     alias mv='mv -i'
     alias rm='rm -i'
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
-
+    alias clock='tty-clock -C 6 -c'
+    alias matrix='cmatrix -C Blue'
 
 else
 	if [[ ${EUID} == 0 ]] ; then
