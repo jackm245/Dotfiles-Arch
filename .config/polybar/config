@@ -80,7 +80,7 @@ height = 20
 ;offset-y = 1%
 
 background = #2e3440
-foreground = #8FBCBB
+foreground = #81a1c1
 
 ; Background gradient (vertical steps)
 ;   background-[0-9]+ = #aarrggbb
@@ -112,7 +112,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
 
 modules-left = i3 xwindow
 modules-center =
-modules-right = arrow1 pavolume arrow2 memory2 arrow3 cpu2  arrow2 battery arrow3 wireless-network arrow2 date 
+modules-right =  arrow1 pavolume arrow2 battery arrow3 arch-aur-updates arrow2 memory2 arrow3 cpu2 arrow2 filesystem arrow3 date arrow2
 
 separator =
 
@@ -327,10 +327,10 @@ type = custom/script
 exec = ~/.config/polybar/scripts/check-all-updates.sh
 interval = 1000
 label = Updates: %output%
-format-foreground = ${colors.foreground-light}
-format-background = ${colors.foreground-dark}
+format-foreground = ${colors.foreground-dark}
+format-background = ${colors.foreground-light}
 format-prefix = "  "
-format-prefix-foreground = #fefefe
+format-prefix-foreground = ${colors.foreground-dark}
 
 
 [module/aur-updates]
@@ -398,7 +398,7 @@ bar-empty = ─
 type = internal/battery
 battery = BAT0
 adapter = AC0
-full-at = 100
+full-at = 99
 
 format-charging = <animation-charging> <label-charging>
 label-charging =  %percentage%%
@@ -538,14 +538,14 @@ type = internal/date
 interval = 5
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %a %b %d, %Y"
+date = " %a %d %b %Y"
 date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p
 format-prefix = "   "
-format-prefix-foreground = ${colors.foreground-light}
-format-foreground = ${colors.foreground-light}
-format-background = ${colors.foreground-dark}
+format-prefix-foreground = ${colors.foreground-dark}
+format-foreground = ${colors.foreground-dark}
+format-background = ${colors.foreground-light}
 label = "%date% %time% "
 
 #################################################################
@@ -620,7 +620,7 @@ fixed-values = false
 
 ; Spacing between entries
 ; Default: 2
-spacing = 4
+spacing = 2
 
 ; Available tags:
 ;   <label-mounted> (default)
@@ -628,9 +628,9 @@ spacing = 4
 ;   <bar-used>
 ;   <ramp-capacity>
 format-mounted = <label-mounted>
-format-mounted-foreground = ${colors.foreground}
-format-mounted-background = ${colors.background}
-format-mounted-underline = #fe0000
+format-mounted-foreground = ${colors.foreground-light}
+format-mounted-background = ${colors.foreground-dark}
+format-mounted-underline =
 
 
 ; Available tokens:
@@ -643,7 +643,7 @@ format-mounted-underline = #fe0000
 ;   %free%
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
-label-mounted = %mountpoint% : %used% used of %total%
+label-mounted =   %used% / %total%: %percentage_used%%
 
 ; Available tokens:
 ;   %mountpoint%
@@ -1180,7 +1180,7 @@ type = internal/xwindow
 ;   %title%
 ; Default: %title%
 label = %title%
-label-maxlen = 20
+label-maxlen = 30
 
 format-prefix = "  "
 format-prefix-underline = #292d3e
