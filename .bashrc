@@ -158,5 +158,5 @@ ex ()
 # (wal -r &)
 # cat /home/jack/.cache/wal/sequences
 # neofetch
-/home/jack/.scripts/terminal-fetchers/arch-fetch-v4
+alias fetch='/home/jack/.scripts/terminal-fetchers/arch-fetch-v4'
 # alias config='/usr/bin/git --git-dir=/home/jack/.cfg/ --work-tree=/home/jack'
