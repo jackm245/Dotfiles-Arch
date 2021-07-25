@@ -25,8 +25,8 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
 
-  -- gui
 
+  -- gui
   -- nvim-colorizer.lua
   use {
     'norcalli/nvim-colorizer.lua',
@@ -103,16 +103,32 @@ return require('packer').startup(function(use)
     end
   }
 
-  --use {
-    --'neoclide/coc.nvim',
-     --branch = 'release',
-  --}
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
+  use 'glepnir/lspsaga.nvim'
+
   use {
     'hrsh7th/nvim-compe',
     config = function()
-      require('core.iv-nvimcompe')
+      require('core.iv-compe')
     end
   }
+
+  use {
+    'neovim/nvim-lspconfig',
+    config = function()
+        require('core.iv-lspconfig')
+    end
+  }
+
+
+  use {
+      'kabouzeid/nvim-lspinstall',
+      config = function()
+          require('core.iv-lspinstall')
+    end
+  }
+
   use {'mboughaba/i3config.vim'}
 
   -- searching

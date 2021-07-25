@@ -63,8 +63,8 @@ vim.cmd('nnoremap <silent> gb :BufferLinePick<CR>')
 
 -- ToggleTerm
 -- <leader>t
--- Telescope
 
+-- Telescope
 vim.cmd('nnoremap <leader>ff <cmd>lua require(\'telescope.builtin\').find_files()<cr>')
 vim.cmd('nnoremap <leader>fg <cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
 vim.cmd('nnoremap <leader>fb <cmd>lua require(\'telescope.builtin\').buffers()<cr>')
@@ -77,6 +77,19 @@ vim.cmd('inoremap <silent><expr> <C-e>     compe#close(\'<C-e>\')')
 vim.cmd('inoremap <silent><expr> <C-f>     compe#scroll({ \'delta\': +4 })')
 vim.cmd('inoremap <silent><expr> <C-d>     compe#scroll({ \'delta\': -4 })')
 
+-- Dashboard
+vim.cmd('nmap <Leader>ss :<C-u>SessionSave<CR>')
+vim.cmd('nmap <Leader>sl :<C-u>SessionLoad<CR>')
+
+-- Lsp config
+vim.cmd('nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>')
+vim.cmd('nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>')
+vim.cmd('nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>')
+vim.cmd('nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>')
+vim.cmd('nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>')
+vim.cmd('nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>')
+vim.cmd('nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
+vim.cmd('nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
 
 
 -- register_mappings(mappings, { silent = true, noremap = true })
