@@ -329,7 +329,7 @@ interval = 1000
 label = Updates: %output%
 format-foreground = ${colors.foreground-dark}
 format-background = ${colors.foreground-light}
-format-prefix = "  "
+format-prefix = "   "
 format-prefix-foreground = ${colors.foreground-dark}
 
 
@@ -643,7 +643,8 @@ format-mounted-underline =
 ;   %free%
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
-label-mounted =   %used% / %total%: %percentage_used%%
+format-mounted-prefix = "   "
+label-mounted = %used% / %total%: %percentage_used%%
 
 ; Available tokens:
 ;   %mountpoint%
