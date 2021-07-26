@@ -18,3 +18,6 @@ vim.api.nvim_command('autocmd BufWritePre * %s/\\s\\+$//e')
 
 -- tree
 vim.api.nvim_command('autocmd BufEnter * if tabpagenr(\'$\') == 1 && winnr(\'$\') == 1 && exists(\'b:NvimTree\') && b:NvimTree.isTabTree() | quit | endif')
+
+-- Recompile suckless programs automatically:
+-- vim.api.nvim_command('autocmd BufWritePost config.h,config.def.h !sudo make install')
