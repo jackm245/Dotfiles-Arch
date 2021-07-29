@@ -3,7 +3,8 @@
 /* Constants */
 #define TERMINAL "st"
 #define TERMCLASS "St"
-static const bool showsystray = true;
+
+/*static const bool showsystray = true;*/
 
 
 /* appearance */
