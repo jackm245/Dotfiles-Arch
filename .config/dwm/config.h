@@ -3,6 +3,8 @@
 /* Constants */
 #define TERMINAL "st"
 #define TERMCLASS "St"
+static const bool showsystray = true;
+
 
 /* appearance */
 static unsigned int borderpx  = 3;        /* border pixel of windows */
@@ -57,7 +59,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static int nmaster     = 1;    /* number of clients in master area */
 static int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
