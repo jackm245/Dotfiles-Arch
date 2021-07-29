@@ -160,3 +160,4 @@ ex ()
 # neofetch
 alias fetch='/home/jack/.scripts/terminal-fetchers/arch-fetch-v4'
 # alias config='/usr/bin/git --git-dir=/home/jack/.cfg/ --work-tree=/home/jack'
+alias fehr='feh --bg-scale --randomize /usr/share/backgrounds/*'
