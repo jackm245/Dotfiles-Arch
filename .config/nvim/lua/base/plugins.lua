@@ -187,6 +187,8 @@ return require('packer').startup(function(use)
     end
   }
 
+  use 'dstein64/vim-startuptime'
+
   -- colorschemes
   use {'arcticicestudio/nord-vim'}
 
