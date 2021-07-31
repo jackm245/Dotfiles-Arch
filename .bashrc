@@ -161,3 +161,4 @@ ex ()
 alias fetch='/home/jack/.scripts/terminal-fetchers/arch-fetch-v4'
 # alias config='/usr/bin/git --git-dir=/home/jack/.cfg/ --work-tree=/home/jack'
 alias fehr='feh --bg-scale --randomize /usr/share/backgrounds/*'
+alias eww-all='eww open-many github folders reddit mail weather poweroff uptime system logout sleep reboot twitter youtube music clock apps profile'
